@@ -1,6 +1,8 @@
 # BlackJack
 OOP practice
 
+Single player game vs the computer, enjoy!
+
 ## Deck.py
 * Handles playing cards ♠️♥️♦️♣️
 * Stores cards in embedded list, aces given extra element for scoring high 🙌 or low ⬇️
