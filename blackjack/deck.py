@@ -12,12 +12,18 @@ class Deck():
                 card.append('H')
 
     def get_card(self):
+        '''
+        Returns a single card as a list with two elements (or three if an Ace)
+        '''
         card = random.choice(self.deck)
         pos = self.deck.index(card)
         self.deck.pop(pos)
         return card
 
     def twist(self):
+        '''
+        Return another card and print what it is
+        '''
         card = self.get_card()
         print(f"You have drawn a {card[1]} of {card[0]}\n")
         print("Your hand is:")

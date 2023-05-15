@@ -4,6 +4,11 @@ class Player():
         self.score = 0
 
     def get_score(self):
+        '''
+        Given the cards (embedded list) in the hand calculate the score of the hand,
+        if aces are present and score is greater than 21 we will iteratively
+        alter them to lower, returns score as an integer
+        '''
         self.score = 0
         for card in self.hand:
             if isinstance(card[1], int):
@@ -22,5 +27,8 @@ class Player():
         return self.score
 
     def print_hand(self):
+        '''
+        Print cards in hand neatly
+        '''
         for i in self.hand:
             print(f'{i[1]} of {i[0]}')

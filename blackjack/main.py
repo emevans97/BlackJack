@@ -7,6 +7,7 @@ def play_again():
     game_finish = False
     while not game_finish:
 
+        # Initialise classes
         Art()
         deck = Deck()
         player1 = Player()
@@ -15,6 +16,7 @@ def play_again():
         print('Dealing cards...')
         time.sleep(3)
 
+        # Append cards to player hands which are lists
         computer.hand = [deck.get_card(), deck.get_card()]
         player1.hand = [deck.get_card(), deck.get_card()]
 
@@ -36,6 +38,7 @@ def play_again():
                 player1.print_hand()
                 time.sleep(1)
 
+                # check for bust
                 if player1.get_score() > 21:
                     wanna_twist = False
             else:
